@@ -12,7 +12,7 @@ const ConvertToInt = (string: string): number => {
     return parseInt(string);
 };
 
-const Main = async () => {
+const Main = () => {
     rl.question("Enter the number of rows: ", (rows) => {
         let row: number = ConvertToInt(rows);
         if (row < 5) {
