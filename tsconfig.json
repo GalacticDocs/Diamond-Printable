@@ -1,0 +1,14 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "module": "CommonJS",
+        "target": "ES2022",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "types": [
+            "node"
+        ],
+        "pretty": true,
+        "alwaysStrict": true,
+    }
+}
