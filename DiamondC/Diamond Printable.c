@@ -1,38 +1,32 @@
 #include<stdio.h>
 
-static void Print(char message)
-{
-	print(""+message);
+static void Print(char message[]) {
+	printf("[C] %s", message);
 }
 
-static int ConvertToInt(char value)
-{
+static int ConvertToInt(char value[30]) {
 	return atoi(value);
 }
 
-static int Input(char question)
-{
+static int Input(char question[30]) {
 	int answer;
 
 	Print(question);
-	scanf_s("%d", &answer);
+	scanf("%d", &answer);
 
 	return answer;
 }
 
-static char Repeat(char value, int times)
-{
-	char result = "";
-	for (int _i = 0; _i < times; _i++)
-	{
-		result += value;
+static char Repeat(char value[5], int times) {
+	char result;
+	for (int _i = 0; _i < times; _i++) {
+		result = result + value;
 	}
 
 	return result;
 }
 
-int main()
-{
+int main() {
 	int rows = Input("Enter the amount of rows: ");
 	if (rows < 5) {
 		rows = 5;
@@ -51,4 +45,6 @@ int main()
 
 		Print(space + star);
 	}
+
+	return 0;
 }
